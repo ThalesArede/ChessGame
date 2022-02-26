@@ -1,4 +1,5 @@
-﻿namespace tabuleiro
+﻿// classe posicao
+namespace tabuleiro
 {
     internal class Posicao
     {

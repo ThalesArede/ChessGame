@@ -1,4 +1,5 @@
-﻿using System;
+﻿// classe program
+using System;
 using tabuleiro; // Adicionamos o using tabuleiro
 namespace Xadrez_Console
 {
@@ -7,12 +8,7 @@ namespace Xadrez_Console
     static void Main(string[] args)
         {
 
-        Posicao P; // Variável do tipo posicao
-
-        P = new Posicao(3, 4); // novo objeto posicao
-
-
-        Console.WriteLine("Posição: " + P);
+            Tabuleiro tab = new Tabuleiro(8, 8);
 
         Console.ReadLine(); // ReadLine adicionado para que espere apertarmos o "Enter"
         }
