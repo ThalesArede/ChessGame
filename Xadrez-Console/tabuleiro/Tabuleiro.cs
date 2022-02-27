@@ -32,13 +32,17 @@
 
         public void colocarPeca(Peca p, Posicao pos) // Operação para colocar peças no tabuleiro
         {
+            if (existePeca(pos)) // Vai apresentar a mensagem de erro caso tente colocar uma peça onde já tem outra
+            {
+                throw new TabuleiroException("Já existe uma peça nesta posição!");
+            }
             pecas[pos.linha, pos.coluna] = p; // Acessa a matriz na linha pos.linha, pos.coluna
             p.posicao = pos;
         }
 
         public bool posicaoValida(Posicao pos) // Método para testar se a posição é valida ou não
         {
-            if (pos.linha < 0 || pos.linha > = linhas || pos.coluna < 0 || pos.coluna > = colunas)
+            if (pos.linha < 0 || pos.linha >= linhas || pos.coluna < 0 || pos.coluna >= colunas)
             {
                 return false;
             }
