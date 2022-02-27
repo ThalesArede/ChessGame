@@ -1,8 +1,6 @@
-﻿// classe program
-using System;
-using tabuleiro; // Adicionamos o using tabuleiro
+﻿using System;
+using tabuleiro;
 using xadrez;
-
 
 namespace Xadrez_Console
 {

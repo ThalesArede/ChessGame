@@ -19,10 +19,37 @@
             return pecas[linha, coluna];
         }
 
+        public Peca peca(Posicao pos) // Sobrecarga do método Peca
+        {
+            return pecas[pos.linha, pos.coluna];
+        }
+
+        public bool existePeca(Posicao pos)
+        {
+            validarPosicao(pos);
+            return peca(pos) != null;
+        }
+
         public void colocarPeca(Peca p, Posicao pos) // Operação para colocar peças no tabuleiro
         {
             pecas[pos.linha, pos.coluna] = p; // Acessa a matriz na linha pos.linha, pos.coluna
             p.posicao = pos;
+        }
+
+        public bool posicaoValida(Posicao pos) // Método para testar se a posição é valida ou não
+        {
+            if (pos.linha < 0 || pos.linha > = linhas || pos.coluna < 0 || pos.coluna > = colunas)
+            {
+                return false;
+            }
+            return true;
+        }
+        public void validarPosicao(Posicao pos) // Método recebe posição, caso a posição não seja valida, lança uma exceção
+        {
+            if (!posicaoValida(pos)) // Se a posição pos não for válida, lançamos uma exceção
+            {
+                throw new TabuleiroException("Posição Inválida!");
+            }
         }
     }
 }
