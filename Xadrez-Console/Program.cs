@@ -10,6 +10,8 @@ namespace Xadrez_Console
 
             Tabuleiro tab = new Tabuleiro(8, 8);
 
+            Tela.imprimirTabuleiro(tab); // Comando que chamamos para imprimir o tabuleiro na tela (CMD)
+
         Console.ReadLine(); // ReadLine adicionado para que espere apertarmos o "Enter"
         }
     }
