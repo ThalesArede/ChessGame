@@ -6,7 +6,7 @@ namespace tabuleiro
     {
 
         Branca,
-        Pret,
+        Preta,
         Amarela,
         Azul,
         Vermelha,

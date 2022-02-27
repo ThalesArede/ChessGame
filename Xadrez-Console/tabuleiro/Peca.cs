@@ -8,13 +8,12 @@
         public int qteMovimentos { get; protected set; }
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Posicao posicao, Tabuleiro tabuleiro, Cor cor) // Construtor
+        public Peca(Tabuleiro tab, Cor cor) // Construtor
         {
-            this.posicao = posicao;
-            this.tab = tabuleiro;    
+            this.posicao = null;
+            this.tab = tab;
             this.cor = cor;
             this.qteMovimentos = 0; // Peça do inicio do jogo tem 0 movimentos
         }
-
     }
 }

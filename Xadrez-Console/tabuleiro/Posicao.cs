@@ -1,7 +1,7 @@
 ﻿// classe posicao
 namespace tabuleiro
 {
-    internal class Posicao
+    class Posicao
     {
         public int linha { get; set; } // Encapsulamento, atributos podem ser acessado e alterados por outras classes
         public int coluna { get; set; }
